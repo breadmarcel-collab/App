@@ -1,0 +1,210 @@
+/* --- Core Page Theme --- */
+body {
+    background-color: #0b0b12 !important; /* Premium deep dark background from your image */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    padding: 30px 15px 10px 15px;
+    text-align: center;
+    background: transparent;
+}
+
+header img {
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    margin-bottom: 12px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: #8e8e93;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* --- Search Bar Layout (Fully Contained & Mobile Safe) --- */
+.game-search-wrapper {
+    margin: 15px auto 25px auto;
+    max-width: 90%; /* Keeps it perfectly bounded inside the mobile screen */
+    width: 400px;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Hides the old "Search our library" text to match the clean image */
+.game-search-wrapper h3 {
+    display: none !important;
+}
+
+.input-icon-wrapper {
+    position: relative;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* The Magnifying Glass Icon */
+.search-icon-left {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 15px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* The Actual Search Space Box */
+.input-icon-wrapper input.quicksearch {
+    width: 100% !important;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 22px !important; /* Smooth pill shape */
+    padding: 0 20px 0 45px !important; /* 45px left padding ensures the typing cursor stays cleanly inside */
+    color: #ffffff !important;
+    font-size: 15px !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+    display: block !important;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.input-icon-wrapper input.quicksearch::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-icon-wrapper input.quicksearch:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* --- Premium Grid Layout (2 Columns on Mobile, 3+ on Tablet/Desktop) --- */
+.app-section-content {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Force exactly two app cards side-by-side on mobile */
+    gap: 12px !important;
+    padding: 0 15px 30px 15px !important;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Layout adaptation for larger screens */
+@media (min-width: 600px) {
+    .app-section-content {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 16px !important;
+    }
+}
+@media (min-width: 900px) {
+    .app-section-content {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 20px !important;
+    }
+}
+
+/* --- Clean Premium App Card Layout --- */
+.app-item {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 20px !important; /* Premium rounded edges */
+    padding: 16px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.app-item-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Smooth Squircles App Icons */
+.app-icon-img {
+    width: 68px !important;
+    height: 68px !important;
+    border-radius: 15px !important;
+    object-fit: cover !important;
+    margin-bottom: 10px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Typography styles */
+.app-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin: 0 0 2px 0 !important;
+    line-height: 1.3 !important;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Keeps long titles perfectly on one line */
+}
+
+.app-item p {
+    font-size: 11px !important;
+    color: #8e8e93 !important;
+    margin: 0 0 14px 0 !important;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- The Pill "GET" Button --- */
+.app-link-wrapper {
+    width: 100% !important;
+}
+
+.app-link-wrapper a {
+    display: block !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #007aff !important; /* Classic premium app store blue accent link */
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    padding: 6px 0 !important;
+    border-radius: 16px !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    text-align: center !important;
+    transition: background 0.2s ease;
+}
+
+.app-link-wrapper a:hover, .app-link-wrapper a:active {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* --- Footer Customizer --- */
+footer {
+    padding: 30px 0;
+}
+.footer-content p {
+    text-align: center;
+    color: #3a3a3c;
+    font-size: 12px;
+    margin: 0;
+}

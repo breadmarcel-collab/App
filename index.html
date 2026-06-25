@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quantum Appstore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Tweaked Apps For Free on iOS and Android" />    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/ico" href="img/favicon.ico" />
+    
+    <meta property="og:title" content="Tweaked Apps For Free on iOS and Android" /> 
+    <meta property="og:description" content="Tweaked Apps For Free on iOS and Android" /> 
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.mywebsiteurl.com/" /> 
+    <meta property="og:image" content="../ww38.mywebsiteurl.com/social-share-image.html" />	
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tweetname" />
+    <meta name="twitter:title" content="Tweet Title" />
+    <meta name="twitter:description" content="Tweet Content" />
+    <meta name="twitter:image" content="../ww38.mywebsiteurl.com/twitter-share-image.html" />
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Righteous&amp;display=swap" rel="stylesheet">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" />  
+    <link href="css/new.css" rel="stylesheet" />	
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header>
+        <div class="container">
+            <div class="header-content animated bounceIn text-center text-white">
+                <img src="img/veo.png" alt="Logo" width="80" style="border-radius: 18px; margin-bottom: 15px;">
+                <h1><span>VEoMoD APPSTORE</span></h1>
+                <p>Install the Best Apps and games</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="app-grid-section">
+        <div class="container">
+            <div class="game-search-wrapper text-center">
+                <div class="input-icon-wrapper">
+                    <span class="fas fa-search search-icon-left"></span>
+                    <input type="text" class="quicksearch input-style" placeholder="Search apps or games..." />
+                </div>	
+            </div>
+            
+            <div class="app-section-content">
+                
+                <div class="app-item" data-name="Tiktok">
+                    <div class="app-item-content">
+                        <img src="img/Fc.png" class="app-icon-img img-fluid" />
+                        <div class="app-title">FC M0D menu</div>
+                        <p>Inject Menu</p>
+                    </div>
+                    <div class="app-link-wrapper">
+                        <a href="https://appsave.space/cl/i/pqr1rl">GET</a>
+                    </div>
+                </div>
+
+                <div class="app-item" data-name="Subway Surfers">
+                    <div class="app-item-content">
+                        <img src="img/sub.jpg" class="app-icon-img img-fluid" />
+                        <div class="app-title">Subway Hack</div>
+                        <p>Unlimited Coins</p>
+                    </div>
+                    <div class="app-link-wrapper">
+                        <a href="https://appsave.space/cl/i/82vnv3">GET</a>
+                    </div>
+                </div>
+   <div class="app-item" data-name="Vector Gold">
+                    <div class="app-item-content">
+                        <img src="img/vector.jpg" class="app-icon-img img-fluid" />
+                        <div class="app-title">Vector Hack</div>
+                        <p>Unlimited Coins</p>
+                    </div>
+                    <div class="app-link-wrapper">
+                        <a href="https://appsave.space/cl/i/9vmdmv">GET</a>
+                    </div>
+                </div>
+
+                <div class="app-item" data-name="DLS Pro">
+                    <div class="app-item-content">
+                        <img src="img/Dls.png" class="app-icon-img img-fluid" />
+                        <div class="app-title">DLS Pro Mobile</div>
+                        <p>Unlimited Everything</p>
+                    </div>
+                    <div class="app-link-wrapper">
+                        <a href="https://appsave.space/cl/i/7jvkvn">GET</a>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <div class="no-result-found-wrapper d-none text-center text-white" style="margin-top: 30px; padding: 0 20px;">
+        <span class="fas fa-sad-ter" style="font-size: 40px; color: #44444a;"></span>
+        <p style="color: #8e8e93;">We hope you enjoy the game ultimate features...</p>
+    </div>
+		
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2026 • wifiwealthempire • VEoMoD Appstore</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var input = $('.quicksearch');
+        input.on('keyup', function() {
+            var name = $(this).val().toLowerCase();
+            var data = $('.app-item');
+            
+            var filteredData = data.filter(function() {
+                return $(this).data('name').toLowerCase().indexOf(name) !== -1;
+            });
+
+            data.hide();
+            filteredData.show();
+
+            // Toggle "Nothing Found" notice instantly if search list is blank
+            if(filteredData.length === 0 && name !== "") {
+                $('.no-result-found-wrapper').removeClass('d-none');
+            } else {
+                $('.no-result-found-wrapper').addClass('d-none');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
