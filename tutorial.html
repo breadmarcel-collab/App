@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Setup Tutorial</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body class="tutorial-body">
+
+    <div class="tutorial-card">
+        <h2>TUTORIAL to Unlock App or Game</h2>
+        <p class="tutorial-desc">Watch this brief video guide if you don't know how to complete the human verification layer.</p>
+
+        <!-- YouTube Video Element Container -->
+        <div class="video-wrapper">
+            <!-- Change 'YOUR_YOUTUBE_VIDEO_ID' to your real video string ID -->
+            <iframe src="https://www.youtube.com/embed/cx3Qq9WPAKM" allowfullscreen></iframe>
+        </div>
+
+        <!-- Dynamic Content Activation Button -->
+        <button id="verify-btn" class="verify-action-btn">
+            Proceed to Unlock 
+        </button>
+        
+        <a href="index.html" class="back-link">← Back to App Store</a>
+    </div>
+
+    <script>
+        // Extract the hidden dynamic locker URL securely from parameter query
+        const urlParams = new URLSearchParams(window.location.search);
+        const dynamicLockerUrl = urlParams.get('locker');
+        const verifyBtn = document.getElementById('verify-btn');
+
+        if (verifyBtn && dynamicLockerUrl) {
+            verifyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = dynamicLockerUrl;
+            });
+        } else {
+            verifyBtn.addEventListener('click', function() {
+                window.location.href = "index.html";
+            });
+        }
+    </script>
+</body>
+</html>
