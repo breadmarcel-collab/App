@@ -96,6 +96,27 @@
 
     <!-- Functionality Scripts -->
     <script>
+        // --- SEARCH BAR FUNCTIONALITIES ---
+const searchInput = document.querySelector('.search-box input');
+
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase().trim();
+        
+        document.querySelectorAll('.app-card').forEach(card => {
+            const appTitle = card.querySelector('h3').innerText.toLowerCase();
+            const appSubtitle = card.querySelector('p').innerText.toLowerCase();
+            
+            // If the search term matches the title or subtitle, show it. Otherwise, hide it.
+            if (appTitle.includes(searchTerm) || appSubtitle.includes(searchTerm)) {
+                card.style.display = ""; // Shows the card
+            } else {
+                card.style.display = "none"; // Hides the card from the grid layout
+            }
+        });
+    });
+}
+        
         let selectedLockerUrl = "";
 
         // Hook up the buttons to prompt the pop-up modal smoothly
