@@ -259,3 +259,46 @@ body {
     font-size: 13px;
 }
 .back-link:hover { color: white; }
+
+/* Responsive Media Queries (Added for iPad, Desktop & Small Mobiles) */
+@media screen and (min-width: 768px) {
+    .search-container {
+        max-width: 680px;
+    }
+    .store-grid {
+        max-width: 680px;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .search-container {
+        max-width: 800px;
+    }
+    .store-grid {
+        max-width: 800px;
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .store-grid {
+        gap: 8px;
+        width: 96%;
+    }
+    .app-card {
+        padding: 14px 6px;
+    }
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    .app-card h3 {
+        font-size: 13px;
+    }
+    .get-btn {
+        font-size: 12px;
+        width: 90%;
+    }
+    }
+    
